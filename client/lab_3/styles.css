@@ -9,17 +9,17 @@
   }
   
 .menu-container {
-    color: #fff;
-    background-color: #5995DA; /*Blue*/
-    padding: 20px 0;
-    display: flex;
+    color: #5995DA;
+    background-color: #D6E9FE;
+    display:flex;
     justify-content: center;
 }
 
 .menu {
     width: 900px;
+    height: 300px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .links {
@@ -46,16 +46,16 @@
 }
 
 .header-container {
-    color: #5995DA;
-    background-color: #D6E9FE;
-    display:flex;
+    color: #fff;
+    background-color: #5995DA; /*Blue*/
+    padding: 20px 0;
+    display: flex;
     justify-content: center;
 }
 .header {
     width: 900px;
-    height: 300px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 
