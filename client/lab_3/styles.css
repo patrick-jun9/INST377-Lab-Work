@@ -28,7 +28,6 @@
 }
 
 .database-demos{
-    border: 1px solid #fff;
     display: flex;
     justify-content:flex-end;
     
@@ -36,6 +35,7 @@
 .push-right{
     display: flex;
     justify-content: flex-end;
+    border: 1px solid#fff;
 }
 .main-page {
     margin-left: 20px;
