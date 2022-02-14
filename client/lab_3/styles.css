@@ -35,6 +35,15 @@
     margin-left: 20px;
     justify-content:flex-end
 }
+.top-page{
+   
+        width: 100%;
+        display: inline-block;
+        background-color: rgba(0,139, 139,0.8);
+        padding: 10px 15px;
+        margin: 0;
+        margin-bottom: 10px;
+}
 
 .header-container {
     color: #5995DA;
