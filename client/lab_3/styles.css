@@ -68,3 +68,33 @@
     height: 300px;
 }
 
+.first-item {
+    order:1;
+}
+
+.last-item {
+    order:-1;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+.footer-item {
+    border: 1px solid #fff;
+    background-color: #D6E9FE;
+    height: 200px;
+    flex: 1;
+  }
+
+.footer-one,
+.footer-three{
+    flex: initial;
+    background-color: #5995DA;
+    width: 300px;
+}
+
+.footer-two{
+    flex: 2;
+}
