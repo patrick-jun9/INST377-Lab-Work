@@ -62,7 +62,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: row-reverse;
 }
 
 .photo-grid-item {
