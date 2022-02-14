@@ -28,12 +28,18 @@
 }
 
 .database-demos{
-    margin-left: 20px;
-    justify-content:flex-end
+    border: 1px solid #fff;
+    display: flex;
+    justify-content:flex-end;
+    
+}
+.push-right{
+    display: flex;
+    justify-content: flex-end;
 }
 .main-page {
     margin-left: 20px;
-    justify-content:flex-end
+    
 }
 .top-page{
    
@@ -53,6 +59,7 @@
     justify-content: center;
 }
 .header {
+    border: 1px solid #fff;
     width: 900px;
     display: flex;
     justify-content: space-around;
