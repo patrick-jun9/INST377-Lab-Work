@@ -29,9 +29,11 @@
 
 .database-demos{
     margin-left: 20px;
+    justify-content:flex-end
 }
 .main-page {
     margin-left: 20px;
+    justify-content:flex-end
 }
 
 .header-container {
