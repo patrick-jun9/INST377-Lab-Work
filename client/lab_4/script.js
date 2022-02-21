@@ -2,8 +2,6 @@ let slidePosition = 0;
 const slides = document.querySelectorAll('carousel_item');
 const totalSlides = slides.length;
 
-console.log(slides);
-
 document.
     querySelectorAll('carousel_button--next');
     .addEventListener("click", function(){
@@ -21,7 +19,7 @@ function updateSlidePosition(){
         slide.classList.remove('carousel_item_visible')
         slide.classList.add('carousel_item--hidden')
     }
-    slides[slidesPosition].classList.add('carousel_item_visible');
+    slides[slidePosition].classList.add('carousel_item_visible');
 }    
 
 function moveToNextSlide(){
