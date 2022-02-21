@@ -1,15 +1,15 @@
 let slidePosition = 0;
-const slides = document.querySelectorAll("carousel_item");
+const slides = document.querySelectorAll('carousel_item');
 const totalSlides = slides.length;
 
 document
-  .querySelectorAll("carousel_button--next")
-  .addEventListener("click", function () {
+  .querySelectorAll('carousel_button--next')
+  .addEventListener('click', function() {
     moveToNextSlide();
   });
 
 document
-  .querySelectorAll("carousel_button--prev")
+  .querySelectorAll('carousel_button--prev')
   .addEventListener("click", function () {
     moveToPrevSlide();
   });
