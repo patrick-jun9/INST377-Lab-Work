@@ -1,0 +1,127 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+.wrapper {
+    font-family: ‘Segoe UI’, Candara, ‘Bitstream Vera Sans’, ‘DejaVu Sans’, ‘Bitsream Vera Sans’, ‘Trebuchet MS’, Verdana, ‘Verdana Ref’, sans-serif;
+    margin:0;
+  }
+  
+.menu-container {
+    color: #5995DA;
+    background-color: #D6E9FE;
+    display:flex;
+    justify-content: center;
+}
+
+.menu {
+    width: 900px;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links {
+    display: flex;
+    align-self: flex-end;
+    margin-bottom: 20px;
+}
+
+
+.database-demos{
+    display: flex;
+    justify-content:flex-end;
+    
+}
+.push-right{
+    display: flex;
+    justify-content: flex-end;
+    border: 1px solid #fff;
+}
+
+.main-page{
+    margin-left: 20px;
+}
+.top-page{
+   
+        width: 100%;
+        display: inline-block;
+        background-color: rgba(0,139, 139,0.8);
+        padding: 10px 15px;
+        margin: 0;
+        margin-bottom: 10px;
+}
+
+.header-container {
+    color: #fff;
+    background-color: #5995DA; /*Blue*/
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+.header {
+    border: 1px solid #fff;
+    width: 900px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.photo-grid-container {
+    display: flex;
+    justify-content: center;
+}
+
+.photo-grid {
+    width: 900px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+}
+
+.photo-grid-item {
+    border: 1px solid#fff;
+    width: 300px;
+    height: 300px;
+}
+
+.first-item {
+    order:1;
+}
+
+.last-item {
+    order:-1;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+.footer-item {
+    border: 1px solid #fff;
+    background-color: #D6E9FE;
+    height: 200px;
+    flex: 1;
+  }
+
+.footer-one,
+.footer-three{
+    flex: initial;
+    background-color: #5995DA;
+    width: 300px;
+}
+
+.footer-two{
+    flex: 2;
+}
+
+@media only screen and (max-width: 400px){
+    body{
+        background-color: #F09A9D;
+    }
+}
