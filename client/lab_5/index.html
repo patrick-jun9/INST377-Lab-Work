@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <div class='wrapper'>
+    <head>
+        <meta charset='UTF-8'/>
+        <title>Kaung Jun</title>
+        <a href='https://bulma.io/'>Bulma.io</a>
+        <link rel='stylesheet' href='styles.css'/>
+        <a href=styles.css>styles</a>
+    </head>
+    <body>
+        <header class='container'>
+            <h1>Kaung Jun: Lab 5</h1>
+        </header>
+        <form action='https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json' method='get' class='food-Services'>
+        </form>
+        <div class='form-row'>
+            <label for='full-name'>Name</label>
+            <input id='full-name' name='full-name' type='text' placeholder='John Doe'/>
+          </div>
+          <div class='form-row'>
+              <label for='food-preferences'>Food Preference</label>
+              <input id='food-preferences' name='food preferences' type='text' placeholder='pizza, hamburger, etc.'/>
+          </div>
+          <fieldset class='legacy-form-row'>
+            <legend>Veggie or Vegan?</legend>
+            <input id='Yes'
+                   name='Yes-or-No'
+                   type='radio'
+                   value='Yes' />
+            <label for='Yes' class='radio-label'>Yes</label>
+            <input id='No'
+                   name='Yes-or-No'
+                   type='radio'
+                   value='No'
+                   checked />
+            <label for='No' class='radio-label'>No</label>
+          </fieldset>
+          <div class='form-row'>
+              <button>Submit</button>
+          </div>
+    </body>
+    </div>
+</html>
