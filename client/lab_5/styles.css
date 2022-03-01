@@ -96,6 +96,20 @@ body {
 .form-row button:active {
   background-color: #407FC7;
 }
+.header-container {
+  color: #fff;
+  background-color: #5995DA; /*Blue*/
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+.header {
+  border: 1px solid #fff;
+  width: 900px;
+  display: flex;
+  justify-content: space-between;
+}
+
  
 @media only screen and (min-width: 700px) {
   /* ... */
