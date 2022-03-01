@@ -90,8 +90,8 @@ body {
   background-color: #407FC7;
 }
 .header-container {
-  color: #fff;
-  background-color: #5995DA; /*Blue*/
+  color: black;
+  background-color: yellow;
   padding: 20px 0;
   display: flex;
   justify-content: center;
