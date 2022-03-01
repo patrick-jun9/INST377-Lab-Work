@@ -26,6 +26,9 @@ body {
   margin-top: 25px;
 }
  
+.links{
+  color:black
+}
 .form-row {
   flex-direction: row;
   align-items: flex-start; /* To avoid stretching */
