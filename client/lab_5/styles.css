@@ -103,7 +103,12 @@ body {
   justify-content: space-between;
 }
 
- 
+.submit-menu{
+  background-color: aqua;
+  color:black;
+  display:flex;
+  flex-direction:column;
+}
 @media only screen and (min-width: 700px) {
   /* ... */
   .form-row button {
