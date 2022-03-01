@@ -15,9 +15,3 @@ async function mainEvent() { // the async keyword means we can make API requests
 
 // this actually runs first! It's calling the function above
 document.addEventListener('DOMContentLoaded', async () => mainEvent()); // the async keyword means we can make API requests
-
-res.send(Buffer.from('whoop'));
-res.send({ some: 'json' });
-res.send('<p>some html</p>');
-res.status(404).send('Sorry, we cannot find that!');
-res.status(500).send({ error: 'something blew up' });
