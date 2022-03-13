@@ -37,3 +37,11 @@ body {
   align-items:center;
   background: hsl(171,100%,41%)
 }
+
+.page_box{
+  display:flex;
+  flex-direction:column;
+  padding:15px;
+  border-radius: 4px;
+  background-color: #efefef;
+}
