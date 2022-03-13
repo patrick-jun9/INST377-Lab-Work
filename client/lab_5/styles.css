@@ -21,19 +21,5 @@ body {
 .wrapper {
   display: flex;
 }
-.container {
-  max-width: 960px;
-  margin-top: 25px;
-  background-color:lime;
-}
- 
-.header {
-  border: 1px yellow;
-  width: 900px;
-  display: flex;
-  padding: 15px;
-  border-radius: 4px;
-  margin:15px;
-  align-items:center;
-}
+
 
