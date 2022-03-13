@@ -26,69 +26,6 @@ body {
   margin-top: 25px;
 }
  
-.links{
-  color:black
-}
-.form-row {
-  flex-direction: row;
-  align-items: flex-start; /* To avoid stretching */
-  margin-bottom: 20px;
-}
-.form-row input[type='text'] {
-  width: 250px;
-  height: initial;
-}
-.form-row label {
-  text-align: right;
-  width: 120px;
-  margin-top: 7px;
-  padding-right: 20px;
-}
- 
-.legacy-form-row {
-  border: none;
-  margin-bottom: 40px;
-}
- 
-.legacy-form-row legend {
-  margin-bottom: 15px;
-}
- 
-.legacy-form-row .radio-label {
-  display: block;
-  font-size: 14px;
-  padding: 0 20px 0 10px;
-}
- 
-.legacy-form-row input[type='radio'] {
-  margin-top: 2px;
-}
- 
-.legacy-form-row .radio-label,
-.legacy-form-row input[type='radio'] {
-  float: left;
-}
-.form-row button {
-  font-size: 16px;
-  font-weight: bold;
- 
-  color: #FFFFFF;
-  background-color: #5995DA;
- 
-  border: none;
-  border-radius: 3px;
- 
-  padding: 10px 40px;
-  cursor: pointer;
-}
- 
-.form-row button:hover {
-  background-color: #76AEED;
-}
- 
-.form-row button:active {
-  background-color: #407FC7;
-}
 .header-container {
   color: black;
   background-color: yellow;
@@ -105,21 +42,6 @@ body {
   border-radius: 4px;
   margin:15px;
   align-items:center;
-}
-
-.submit-menu{
-  background-color: aqua;
-  color:black;
-  display:flex;
-  justify-content:center;
-  flex-direction:column;
-  align-items:center;
-}
-.text-writing{
-  background-color:white;
-  color:black;
-  display:flex;
-  justify-content:flex-end;
 }
 
 @media only screen and (min-width: 700px) {
