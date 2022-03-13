@@ -18,6 +18,10 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
 }
+.columns form{
+  display:flex;
+  flex-direction: column;
+}
  
 .wrapper {
   display: flex;
