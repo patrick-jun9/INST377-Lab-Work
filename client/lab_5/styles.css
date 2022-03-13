@@ -24,18 +24,11 @@ body{
 .container {
   max-width: 960px;
   margin-top: 25px;
+  background-color:lime;
 }
  
-.header-container {
-  color: black;
-  background-color: yellow;
-  padding: 20px 0;
-  display: flex;
-  justify-content: center;
-  align-items:stretch;
-}
 .header {
-  border: 1px solid #fff;
+  border: 1px yellow;
   width: 900px;
   display: flex;
   padding: 15px;
@@ -44,28 +37,3 @@ body{
   align-items:center;
 }
 
-@media only screen and (min-width: 700px) {
-  /* ... */
-  .form-row button {
-    margin-left: 120px;
-  }
-  .legacy-form-row {
-    margin-bottom: 10px;
-  }
-  .legacy-form-row legend {
-    width: 120px;
-    text-align: right;
-    padding-right: 20px;
-  }
-  .legacy-form-row legend {
-    float: left;
-  }
-  .form-row input[type='text'],
-  .form-row input[type='email'],    /* Add */
-  .form-row select,                 /* These */
-  .form-row textarea {              /* Selectors */
-    width: 250px;
-    height: initial;
-  }
-  /* ... */
-}
