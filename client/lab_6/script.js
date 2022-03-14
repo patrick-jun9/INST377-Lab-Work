@@ -21,7 +21,7 @@ function restoArrayMaker(dataArray) {
   // });
 }
 
-function createHtmlList(collection){
+function createHtmlList(collection) {
   console.log(collection);
 }
 async function mainEvent() {
