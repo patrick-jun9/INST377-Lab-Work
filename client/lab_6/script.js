@@ -14,9 +14,10 @@ function restoArrayMaker(dataArray) {
     const restoNum = getRandomIntInclusive(0, dataArray.length - 1);
     return dataArray[restoNum];
   });
-  console.log(listItems);
-  return listItems;
 
+  function createList(collection) {
+    console.log(collection);
+  }
   // range.forEach((item) => {
   // console.log('range item', item);
   // });
@@ -38,6 +39,7 @@ async function mainEvent() {
       // arrayFromJson.data - we're accessing a key called 'data' on the returned object
       // it contains all 1,000 records we need
       const restoArray = restoArrayMaker(arrayFromJson.data);
+      createList(restoArray);
     });
   }
 }
