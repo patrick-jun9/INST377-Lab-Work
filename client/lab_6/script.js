@@ -1,5 +1,10 @@
+function dataHandler(dataArray){
+
+}
+
 async function mainEvent() { // the async keyword means we can make API requests
   const form = document.querySelector('.main_form');
+  const submit = document.querySelector('button');
   form.addEventListener('submit', async (submitEvent) => { // async has to be declared all the way to get an await
     submitEvent.preventDefault(); // This prevents your page from refreshing!
     console.log('form submission'); // this is substituting for a "breakpoint"
@@ -9,6 +14,7 @@ async function mainEvent() { // the async keyword means we can make API requests
     // arrayFromJson.data - we're accessing a key called 'data' on the returned object
     // it contains all 1,000 records we need
   });
+  //dataHandler();
 }
 
 // this actually runs first! It's calling the function above
