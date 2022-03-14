@@ -8,21 +8,14 @@ function getRandomIntInclusive(min, max) {
 
 function restoArrayMaker(dataArray) {
   console.log('fired dataHandler');
-  console.table(dataArray); // this is called "dot notation"
   const range = [...Array(15).keys()];
   const listItems = range.map((item, index) => {
     const restoNum = getRandomIntInclusive(0, dataArray.length - 1);
     return dataArray[restoNum];
   });
 
-  function createList(collection) {
-    console.log(collection);
-    const targetList= document.querySelector(".resto-list")
-    collection.forEach((item) => {
-      const injectItem = `<li>${item.name}</li>`;
-      targetList.innerHTML += (injectItem);
-    });
-  }
+  console.log(listItems);
+
   // range.forEach((item) => {
   // console.log('range item', item);
   // });
@@ -44,7 +37,6 @@ async function mainEvent() {
       // arrayFromJson.data - we're accessing a key called 'data' on the returned object
       // it contains all 1,000 records we need
       const restoArray = restoArrayMaker(arrayFromJson.data);
-      createList(restoArray);
     });
   }
 }
