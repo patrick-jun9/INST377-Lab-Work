@@ -13,9 +13,6 @@ function restoArrayMaker(dataArray) {
     const restoNum = getRandomIntInclusive(0, dataArray.length - 1);
     return dataArray[restoNum];
   });
-
-  console.log(listItems);
-
   // range.forEach((item) => {
   // console.log('range item', item);
   // });
