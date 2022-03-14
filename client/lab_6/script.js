@@ -34,7 +34,6 @@ async function mainEvent() {
       // arrayFromJson.data - we're accessing a key called 'data' on the returned object
       // it contains all 1,000 records we need
       const restoArray = restoArrayMaker(arrayFromJson.data);
-      createHtmlList(restoArray);
     });
   }
 }
