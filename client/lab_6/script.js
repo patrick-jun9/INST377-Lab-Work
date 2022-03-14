@@ -11,7 +11,7 @@ function restoArrayMaker(dataArray) {
   console.table(dataArray); // this is called "dot notation"
   const range = [...Array(15).keys()];
   const listItems = range.map((item, index) => {
-    const restoNum= getRandomIntInclusive(0, dataArray.length - 1);
+    const restoNum = getRandomIntInclusive(0, dataArray.length - 1);
     return dataArray[restoNum];
   });
   console.log(listItems);
