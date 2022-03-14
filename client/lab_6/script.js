@@ -1,6 +1,16 @@
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
+}
+
 function dataHandler(dataArray) {
   console.log('fired dataHandler');
   console.table(dataArray); // this is called "dot notation"
+  const range = [...Array(15).keys()];
+  range.forEach((item) => {
+    console.log('range item', item);
+  });
 }
 
 async function mainEvent() {
