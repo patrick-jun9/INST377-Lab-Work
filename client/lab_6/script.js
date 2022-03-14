@@ -17,6 +17,11 @@ function restoArrayMaker(dataArray) {
 
   function createList(collection) {
     console.log(collection);
+    const targetList= document.querySelector(".resto-list")
+    collection.forEach((item) => {
+      const injectItem = `<li>${item.name}</li>`;
+      targetList.innerHTML += (injectItem);
+    });
   }
   // range.forEach((item) => {
   // console.log('range item', item);
