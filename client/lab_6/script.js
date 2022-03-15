@@ -1,4 +1,5 @@
-function getRandomIntInclusive(min, max) {
+function getRandomIntInclusive(min, max) { // helps us to get random integer
+  // to make our random resto array
   const newMin = Math.ceil(min);
   const newMax = Math.floor(max);
   return Math.floor(
@@ -6,12 +7,14 @@ function getRandomIntInclusive(min, max) {
   );
 }
 
-function restoArrayMaker(dataArray) {
+function restoArrayMaker(dataArray) { // Takes the data from a range of 15
+  // then returns the list of items
   console.log('fired dataHandler');
   console.table(dataArray);
-  const range = [...Array(15).keys()];
+  const range = [...Array(15).keys()]; // This is our range
   const listItems = range.map((item, index) => {
-    const restoNum = getRandomIntInclusive(0, dataArray.length - 1);
+    const restoNum = getRandomIntInclusive(0, dataArray.length - 1); // calls function
+    // getrandomIntinclusive in order to return an array of values
     return dataArray[restoNum];
   });
   console.log(listItems);
@@ -20,10 +23,12 @@ function restoArrayMaker(dataArray) {
 function createHTMLlist(collection) {
   console.log('fired html');
   console.log(collection);
-  const targetList = document.querySelector('.resto-list');
-  targetList.innerHTML = '';
+  const targetList = document.querySelector('.resto-list'); // this is looking through
+  // the document for any instance of resto list
+  targetList.innerHTML = ''; // helps to stop redundancy after a submit
   collection.forEach((item) => {
-    const injectItem = `<li>${item.name}</li>`;
+    const injectItem = `<li>${item.name}</li>`; // takes the name from the large array and injects the
+    // items using inner html += below
     targetList.innerHTML += injectItem;
   });
 }
@@ -43,8 +48,10 @@ async function mainEvent() {
       console.log('form submission'); // this is substituting for a "breakpoint"
       // arrayFromJson.data - we're accessing a key called 'data' on the returned object
       // it contains all 1,000 records we need
-      const restoArray = restoArrayMaker(arrayFromJson.data);
-      createHTMLlist(restoArray);
+      const restoArray = restoArrayMaker(arrayFromJson.data); // calls restoarraymaker to get the
+      // right array for the actual HTML List
+      createHTMLlist(restoArray); // calls the createHtml function to run and use resto array as
+      // the paramater which would be what ever array we recieve
     });
   }
 }
