@@ -1,4 +1,4 @@
-function getRandomIntInclusive(min, max) { // helps us to get random integer
+function RandomIntInclusive(min, max) { // helps us to get random integer
   // to make our random resto array
   const newMin = Math.ceil(min);
   const newMax = Math.floor(max);
@@ -11,16 +11,16 @@ function restoArrayMaker(dataArray) { // Takes the data from a range of 15
   // then returns the list of items
   console.log('fired dataHandler');
   console.table(dataArray);
-  const range = [...Array(15).keys()]; // This is our range
+  const range = Array.from(Array(15).keys); // This is our range
   const listItems = range.map((item, index) => {
-    const restoNum = getRandomIntInclusive(0, dataArray.length - 1); // calls function
+    const restoNum = RandomIntInclusive(0, dataArray.length - 1); // calls function
     // getrandomIntinclusive in order to return an array of values
     return dataArray[restoNum];
   });
   console.log(listItems);
   return listItems;
 }
-function createHTMLlist(collection) {
+function creatingHTMLlist(collection) {
   console.log('fired html');
   console.log(collection);
   const targetList = document.querySelector('.resto-list'); // this is looking through
@@ -50,7 +50,7 @@ async function mainEvent() {
       // it contains all 1,000 records we need
       const restoArray = restoArrayMaker(arrayFromJson.data); // calls restoarraymaker to get the
       // right array for the actual HTML List
-      createHTMLlist(restoArray); // calls the createHtml function to run and use resto array as
+      creatingHTMLlist(restoArray); // calls the createHtml function to run and use resto array as
       // the paramater which would be what ever array we recieve
     });
   }
