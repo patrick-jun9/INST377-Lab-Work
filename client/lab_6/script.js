@@ -11,7 +11,7 @@ function restoArrayMaker(dataArray) { // Takes the data from a range of 15
   // then returns the list of items
   console.log('fired dataHandler');
   console.table(dataArray);
-  const range = Array.from(Array(15).keys); // This is our range
+  const range = Array.from({length: 15}, (x, i) => i); // This is our range
   const listItems = range.map((item, index) => {
     const restoNum = RandomIntInclusive(0, dataArray.length - 1); // calls function
     // getrandomIntinclusive in order to return an array of values
