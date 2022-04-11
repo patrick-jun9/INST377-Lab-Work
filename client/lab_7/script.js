@@ -60,6 +60,7 @@ async function mainEvent() {
       });
       // creatingHTMLlist(restoMatch);
       console.log(restoMatch);
+      creatingHTMLlist(restoMatch);
     });
 
     form.addEventListener('submit', async (submitEvent) => {
