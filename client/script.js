@@ -66,11 +66,11 @@ async function mainEvent() {
   const retrievalVar = 'res=taurants';
   submit.style.display = 'none';
 
-  if(localStorage.getItem(retrievalVar) === undefined)
-  const results = await fetch('/api/foodServicesPG'); // This accesses some data from our API
-  const arrayFromJson = await results.json(); // This changes it into data we can use - an object
-  console.log(arrayFromJson);
-  localStorage.getItem(retrievalVar, JSON.stringify(arrayFromJson.data));
+  if (localStorage.getItem(retrievalVar) === undefined)
+  // const results = await fetch('/api/foodServicesPG'); // This accesses some data from our API
+  // const arrayFromJson = await results.json(); // This changes it into data we can use - an object
+  // console.log(arrayFromJson);
+  {localStorage.getItem(retrievalVar, JSON.stringify(arrayFromJson.data)); }
   const storedDataString = localStorage.getItem(retrievalVar)
   const storedDataArray = Json.parse(storedDataString);
   console.log(storedDataArray);
