@@ -50,10 +50,10 @@ async function mainEvent() {
     resto.addEventListener('input', async (event) => {
       console.log(event.target.value);
 
-      if (currentArray.length < 1) {
-        return;
-      }
-      const restoMatch = currentArray.filter((item) => {
+      // if (currentArray.length < 1) {
+      //  return;
+      // }
+      const restoMatch = arrayFromJson.data.filter((item) => {
         const lowerCase = item.name.toLowerCase();
         const lowerValue = event.target.value.toLowerCase();
         return lowerCase.includes(lowerValue);
