@@ -48,7 +48,6 @@ async function mainEvent() {
 
     let currentArray = [];
     resto.addEventListener('input', async (event) => {
-      if (currentArray === undefined) { return; }
       console.log(event.target.value);
 
       if (currentArray.length < 1) {
