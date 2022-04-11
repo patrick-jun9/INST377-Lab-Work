@@ -50,6 +50,10 @@ async function mainEvent() {
     resto.addEventListener('input', async (event) => {
       if (currentArray === undefined) { return; }
       console.log(event.target.value);
+
+      if (currentArray.length < 1) {
+        return;
+      }
       const restoMatch = currentArray.filter((item) => {
         console.log(item);
         console.log(item.name);
