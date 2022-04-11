@@ -1,3 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: ‘Segoe UI’, Candara, ‘Bitstream Vera Sans’, ‘DejaVu Sans’,
+    ‘Bitsream Vera Sans’, ‘Trebuchet MS’, Verdana, ‘Verdana Ref’, sans-serif;
+  background-color: darkslategray;
+}
+#map { height: 180px
+}
+/* Page Layout */
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top:35px;
+}
+.columns form{
+  display:flex;
+  flex-direction: column;
+}
+ 
+.wrapper {
+  display: flex;
+}
+
+.container {
+  max-width: 960px;
+  margin-top: 25px;
+}
+ 
+.header {
+  border: 1px yellow;
+  width: 900px;
+  display: flex;
+  padding: 15px;
+  border-radius: 4px;
+  margin:15px;
+  align-items:center;
+  background: hsl(171,100%,41%)
+}
+
+.page_box{
+  display:flex;
+  flex-direction:column;
+  padding:15px;
+  border-radius: 4px;
+  background-color: #efefef;
+}
+.form_item{
+  display:flex;
+  flex-direction:column;
+  margin:5px
+}
+
 #mapid {
   width: 100%;
   padding-top: 100%; /* 1:1 Aspect Ratio */
