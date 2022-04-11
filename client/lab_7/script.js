@@ -52,6 +52,7 @@ async function mainEvent() {
       console.log(event.target.value);
       const restoMatch = currentArray.filter((item) => {
         console.log(item);
+        console.log(item.name);
         return item.name.includes(event.target.value);
       });
       console.log(restoMatch);
