@@ -22,7 +22,7 @@ function restoArrayMaker(dataArray) { // Takes the data from a range of 15
 }
 function creatingHTMLlist(collection) {
   // console.log('fired html');
-  // console.table(collection);
+  console.table(collection);
   const targetList = document.querySelector('.resto-list'); // this is looking through
   // the document for any instance of resto list
   targetList.innerHTML = ''; // helps to stop redundancy after a submit
@@ -54,6 +54,7 @@ async function mainEvent() {
         return;
       }
       const restoMatch = currentArray.filter((item) => item.name.includes(event.target.value));
+      creatingHTMLlist(restoMatch);
       // console.log(restoMatch);
     });
 
@@ -65,7 +66,7 @@ async function mainEvent() {
       // it contains all 1,000 records we need
       currentArray = restoArrayMaker(arrayFromJson.data); // calls restoarraymaker to get the
       // right array for the actual HTML List
-      creatingHTMLlist(restoMatch); // calls the createHtml function to run and use resto array as
+      creatingHTMLlist(currentArray); // calls the createHtml function to run and use resto array as
     // the paramater which would be what ever array we recieve
     });
   }
