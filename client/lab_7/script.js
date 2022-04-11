@@ -67,7 +67,8 @@ async function mainEvent() {
       currentArray = restoArrayMaker(arrayFromJson.data); // calls restoarraymaker to get the
       // right array for the actual HTML List
       creatingHTMLlist(currentArray); // calls the createHtml function to run and use resto array as
-    // the paramater which would be what ever array we recieve
+      // the paramater which would be what ever array we recieve
+      console.log(currentArray);
     });
   }
 }
