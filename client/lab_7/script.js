@@ -55,7 +55,7 @@ async function mainEvent() {
         console.log(item.name);
         return item.name.includes(event.target.value);
       });
-      console.log(restoMatch);
+      // console.log(restoMatch);
     });
 
     form.addEventListener('submit', async (submitEvent) => {
@@ -64,9 +64,9 @@ async function mainEvent() {
       // console.log('form submission'); // this is substituting for a "breakpoint"
       // arrayFromJson.data - we're accessing a key called 'data' on the returned object
       // it contains all 1,000 records we need
-      const restoArray = restoArrayMaker(arrayFromJson.data); // calls restoarraymaker to get the
+      currentArray = restoArrayMaker(arrayFromJson.data); // calls restoarraymaker to get the
       // right array for the actual HTML List
-      creatingHTMLlist(restoArray); // calls the createHtml function to run and use resto array as
+      creatingHTMLlist(currentArray); // calls the createHtml function to run and use resto array as
     // the paramater which would be what ever array we recieve
     });
   }
