@@ -1,3 +1,5 @@
+const { SequelizeScopeError } = require("sequelize/types");
+
 function RandomIntInclusive(min, max) { // helps us to get random integer
   // to make our random resto array
   const newMin = Math.ceil(min);
@@ -46,9 +48,15 @@ async function mainEvent() {
   if (arrayFromJson.data.length > 0) { // prevents race conditions
     submit.style.display = 'block';
 
+    let currentArray = [];
     resto.addEventListener('input', async (event) => {
+      if (currentArray === undefined) { return; }
       console.log(event.target.value);
-    });
+      const restoMatch = currentArray.filter((resto) => {
+         return resto.name.includes(event.target.value);
+         console.log(restoMatch);
+      });
+
     form.addEventListener('submit', async (submitEvent) => {
     // async has to be declared all the way to get an await
       submitEvent.preventDefault(); // This prevents your page from refreshing!
