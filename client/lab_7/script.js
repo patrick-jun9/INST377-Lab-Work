@@ -53,7 +53,7 @@ async function mainEvent() {
       if (currentArray.length < 1) {
         return;
       }
-      const restoMatch = currentArray.filter((item) => {
+      currentArray.filter((item) => {
         console.log(item);
         console.log(item.name);
         return item.name.includes(event.target.value);
