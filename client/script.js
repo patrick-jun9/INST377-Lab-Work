@@ -175,7 +175,8 @@ function creatingHTMLlist(collection) {
   });
 }
 function initMap() {
-  const map = L.map('map').setView([51.505, -0.09], 13);
+  const latLong = [38.83,-76.85];
+  const map = L.map('map').setView([latLong], 9);
   L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
@@ -195,12 +196,19 @@ async function mainEvent() {
 
   const resto = document.querySelector('#resto_Name');
   const city = document.querySelector('#city');
-  const map = initMap();
-  // const results = await fetch('/api/foodServicesPG'); // This accesses some data from our API
-  // const arrayFromJson = await results.json(); // This changes it into data we can use - an object
-  // console.log(arrayFromJson);
-  const arrayFromJson = {data: []}; // TOdo remove debug tool
-  if (arrayFromJson.data.length > 0) { // prevents race conditions
+  const map = initMap('map');
+  const retrievalVar = 'res=taurants';
+  submit.style.display = 'none';
+
+  if(localStorage.getItem(retrievalVar) === undefined)
+  const results = await fetch('/api/foodServicesPG'); // This accesses some data from our API
+  const arrayFromJson = await results.json(); // This changes it into data we can use - an object
+  console.log(arrayFromJson);
+  const storedData = localStorage.getItem(retrievalVar, JSON.stringify(arrayFromJson.data));
+  //const storedDataArray = Json.parse(storedData);
+  console.log(storedData);
+  // const arrayFromJson = {data: []}; // TOdo remove debug tool
+  if (storedData.length > 0) { // prevents race conditions
     submit.style.display = 'block';
 
     let currentArray = [];
@@ -210,7 +218,7 @@ async function mainEvent() {
       // if (currentArray.length < 1) {
       //  return;
       // }
-      const restoMatch = arrayFromJson.data.filter((item) => {
+      const restoMatch = storedData.filter((item) => {
         const lowerCase = item.name.toLowerCase();
         const lowerValue = event.target.value.toLowerCase();
         return lowerCase.includes(lowerValue);
@@ -226,7 +234,7 @@ async function mainEvent() {
       // console.log('form submission'); // this is substituting for a "breakpoint"
       // arrayFromJson.data - we're accessing a key called 'data' on the returned object
       // it contains all 1,000 records we need
-      currentArray = restoArrayMaker(arrayFromJson.data); // calls restoarraymaker to get the
+      currentArray = restoArrayMaker(storedData); // calls restoarraymaker to get the
       // right array for the actual HTML List
       creatingHTMLlist(currentArray); // calls the createHtml function to run and use resto array as
       // the paramater which would be what ever array we recieve
