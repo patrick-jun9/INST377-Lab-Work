@@ -9,8 +9,8 @@ function RandomIntInclusive(min, max) { // helps us to get random integer
 
 function restoArrayMaker(dataArray) { // Takes the data from a range of 15
 // then returns the list of items
-  console.log('fired dataHandler');
-  console.table(dataArray);
+  // console.log('fired dataHandler');
+  // console.table(dataArray);
   const range = Array.from({length: 15}, (x, i) => i); // This is our range
   const listItems = range.map((item, index) => {
     const restoNum = RandomIntInclusive(0, dataArray.length - 1); // calls function
@@ -21,8 +21,8 @@ function restoArrayMaker(dataArray) { // Takes the data from a range of 15
   return listItems;
 }
 function creatingHTMLlist(collection) {
-  console.log('fired html');
-  console.table(collection);
+  // console.log('fired html');
+  // console.table(collection);
   const targetList = document.querySelector('.resto-list'); // this is looking through
   // the document for any instance of resto list
   targetList.innerHTML = ''; // helps to stop redundancy after a submit
@@ -42,7 +42,7 @@ async function mainEvent() {
   const city = document.querySelector('#city');
   const results = await fetch('/api/foodServicesPG'); // This accesses some data from our API
   const arrayFromJson = await results.json(); // This changes it into data we can use - an object
-  console.log(arrayFromJson);
+  // console.log(arrayFromJson);
   if (arrayFromJson.data.length > 0) { // prevents race conditions
     submit.style.display = 'block';
 
@@ -52,7 +52,7 @@ async function mainEvent() {
     form.addEventListener('submit', async (submitEvent) => {
     // async has to be declared all the way to get an await
       submitEvent.preventDefault(); // This prevents your page from refreshing!
-      console.log('form submission'); // this is substituting for a "breakpoint"
+      // console.log('form submission'); // this is substituting for a "breakpoint"
       // arrayFromJson.data - we're accessing a key called 'data' on the returned object
       // it contains all 1,000 records we need
       const restoArray = restoArrayMaker(arrayFromJson.data); // calls restoarraymaker to get the
