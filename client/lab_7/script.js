@@ -1,5 +1,3 @@
-const { SequelizeScopeError } = require("sequelize/types");
-
 function RandomIntInclusive(min, max) { // helps us to get random integer
   // to make our random resto array
   const newMin = Math.ceil(min);
@@ -52,7 +50,10 @@ async function mainEvent() {
     resto.addEventListener('input', async (event) => {
       if (currentArray === undefined) { return; }
       console.log(event.target.value);
-      const restoMatch = currentArray.filter((item) => item.name.includes(event.target.value));
+      const restoMatch = currentArray.filter((item) => {
+        console.log(item);
+        return item.name.includes(event.target.value);
+      });
       console.log(restoMatch);
     });
 
