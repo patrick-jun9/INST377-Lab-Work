@@ -53,7 +53,11 @@ async function mainEvent() {
       if (currentArray.length < 1) {
         return;
       }
-      const restoMatch = currentArray.filter((item) => item.name.includes(event.target.value));
+      const restoMatch = currentArray.filter((item) => {
+        const lowerCase = item.name.toLowerCase();
+        const lowerValue = event.target.value.toLowerCase();
+        return lowerCase.includes(lowerValue);
+      });
       // creatingHTMLlist(restoMatch);
       console.log(restoMatch);
     });
