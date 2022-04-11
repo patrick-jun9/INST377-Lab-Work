@@ -52,10 +52,9 @@ async function mainEvent() {
     resto.addEventListener('input', async (event) => {
       if (currentArray === undefined) { return; }
       console.log(event.target.value);
-      const restoMatch = currentArray.filter((resto) => {
-         return resto.name.includes(event.target.value);
-         console.log(restoMatch);
-      });
+      const restoMatch = currentArray.filter((item) => item.name.includes(event.target.value));
+      console.log(restoMatch);
+    });
 
     form.addEventListener('submit', async (submitEvent) => {
     // async has to be declared all the way to get an await
