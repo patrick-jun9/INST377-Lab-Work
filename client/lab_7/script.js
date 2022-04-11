@@ -53,11 +53,7 @@ async function mainEvent() {
       if (currentArray.length < 1) {
         return;
       }
-      currentArray.filter((item) => {
-        console.log(item);
-        console.log(item.name);
-        return item.name.includes(event.target.value);
-      });
+      const restoMatch = currentArray.filter((item) => item.name.includes(event.target.value));
       // console.log(restoMatch);
     });
 
@@ -69,7 +65,7 @@ async function mainEvent() {
       // it contains all 1,000 records we need
       currentArray = restoArrayMaker(arrayFromJson.data); // calls restoarraymaker to get the
       // right array for the actual HTML List
-      creatingHTMLlist(currentArray); // calls the createHtml function to run and use resto array as
+      creatingHTMLlist(restoMatch); // calls the createHtml function to run and use resto array as
     // the paramater which would be what ever array we recieve
     });
   }
