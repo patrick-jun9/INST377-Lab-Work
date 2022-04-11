@@ -37,11 +37,18 @@ async function mainEvent() {
   // the async keyword means we can make API requests
   const form = document.querySelector('.main_form');
   const submit = document.querySelector('button');
+
+  const resto = document.querySelector('#resto_Name');
+  const city = document.querySelector('#city');
   const results = await fetch('/api/foodServicesPG'); // This accesses some data from our API
   const arrayFromJson = await results.json(); // This changes it into data we can use - an object
   console.log(arrayFromJson);
-  if (arrayFromJson.data.length > 0) {
+  if (arrayFromJson.data.length > 0) { // prevents race conditions
     submit.style.display = 'block';
+
+    resto.addEventListener('input', async (event) => {
+      console.log(event.target.value);
+    });
     form.addEventListener('submit', async (submitEvent) => {
     // async has to be declared all the way to get an await
       submitEvent.preventDefault(); // This prevents your page from refreshing!
