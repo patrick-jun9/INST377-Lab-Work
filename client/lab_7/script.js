@@ -54,8 +54,8 @@ async function mainEvent() {
         return;
       }
       const restoMatch = currentArray.filter((item) => item.name.includes(event.target.value));
-      creatingHTMLlist(restoMatch);
-      // console.log(restoMatch);
+      // creatingHTMLlist(restoMatch);
+      console.log(restoMatch);
     });
 
     form.addEventListener('submit', async (submitEvent) => {
